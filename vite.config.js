@@ -5,5 +5,4 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: '/world-wise/',
   plugins: [react()],
-  base: '/world-wise/',
 })
