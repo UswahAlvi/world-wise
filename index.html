@@ -1,16 +1,14 @@
-<!-- public/404.html -->
-<!DOCTYPE html>
-<html>
+
+<!doctype html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Redirecting...</title>
-    <script>
-      const pathname = window.location.pathname;
-      const redirectPath = '/' + pathname.split('/').slice(2).join('/');
-      window.location.replace(window.location.origin + '/world-wise/#' + redirectPath);
-    </script>
+    <link rel="icon" type="image/png" href="earth-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WorldWise</title>
   </head>
   <body>
-    Redirecting...
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
