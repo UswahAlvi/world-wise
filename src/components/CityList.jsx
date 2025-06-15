@@ -13,7 +13,7 @@ export default function CityList() {
   
   return(
     <div className={styles.cityList}>
-        {cities.map(city=><CityItem city={city} key={city.id}/>)}
+        {cities.map(city=><CityItem city={city} key={city._id}/>)}
     </div>
   )
 }

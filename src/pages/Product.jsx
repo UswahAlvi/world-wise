@@ -8,20 +8,18 @@ export default function Product() {
       <section>
         <img
           src="img-1.jpg"
-          alt="person with dog overlooking mountain with sunset"
+          alt="Person exploring a mountain landscape at sunset"
         />
         <div>
-          <h2>About WorldWide.</h2>
+          <h2>About WorldWide</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo est
-            dicta illum vero culpa cum quaerat architecto sapiente eius non
-            soluta, molestiae nihil laborum, placeat debitis, laboriosam at fuga
-            perspiciatis?
+            WorldWide is your personal travel log and map companion. Whether you're
+            a casual explorer or a seasoned adventurer, our app helps you mark the cities you've visited, store memories,
+            and plan your future journeys — all on a sleek interactive map.
           </p>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis
-            doloribus libero sunt expedita ratione iusto, magni, id sapiente
-            sequi officiis et.
+            With features like geolocation tagging, trip notes, and emoji flags for each country, WorldWide turns your travel history into a colorful visual story.
+            Say goodbye to forgetting where you've been — and hello to exploring with purpose.
           </p>
         </div>
       </section>

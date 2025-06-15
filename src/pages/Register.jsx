@@ -5,10 +5,11 @@ import {useNavigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext.jsx";
 import Button from "../components/Button.jsx";
 
-export default function Login() {
+export default function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const {login,isAuthenticated}=useAuth();
+  const [name, setName] = useState("");
+  const {register,isAuthenticated}=useAuth();
   const navigate=useNavigate();
 
   useEffect(function(){
@@ -18,12 +19,22 @@ export default function Login() {
   },[isAuthenticated])
   function handleSubmit(e){
     e.preventDefault();
-    login(email,password);
+    register(name, email,password);
   }
   return (
     <main className={styles.login}>
       <PageNav />
       <form className={styles.form} onSubmit={handleSubmit}>
+        <div className={styles.row}>
+          <label htmlFor="name">Name</label>
+          <input
+            type="name"
+            id="name"
+            onChange={(e) => setName(e.target.value)}
+            value={name}
+          />
+        </div>
+
         <div className={styles.row}>
           <label htmlFor="email">Email address</label>
           <input
@@ -45,11 +56,9 @@ export default function Login() {
         </div>
 
         <div>
-          <Button type='primary'>Login</Button></div>
+          <Button type='primary'>Register</Button>
+        </div>
       </form>
-      <div style={{display:"flex",justifyContent:"center", alignItems:"center", fontSize:"18px", gap: '10px'}}>
-          Not Registered? <Button type='primary' onClick={()=>navigate('/register')}> Go here </Button>
-      </div>
     </main>
   );
 }

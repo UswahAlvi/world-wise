@@ -10,8 +10,9 @@ import CountryList from './components/CountryList';
 import City from './components/City';
 import Form from './components/Form'
 import { CitiesProvider } from './contexts/CitiesContext.jsx';
-import { AuthProvider } from './contexts/FakeAuthContext.jsx';
+import { AuthProvider } from './contexts/AuthContext.jsx';
 import ProtectedRoute from './pages/ProtectedRoute.jsx';
+import Register from './pages/Register.jsx';
 
 export default function App() {
 
@@ -24,7 +25,8 @@ export default function App() {
         <Route path='/pricing' element={<Pricing />}></Route>
         <Route path='/product' element={<Product />}></Route>
         <Route path='/login' element={<Login />}></Route>
-        <Route path='/app' element={<ProtectedRoute><AppLayout/></ProtectedRoute>}>
+        <Route path='/register' element={<Register />}></Route>
+        <Route path='/app' element={<AppLayout/>}>
           <Route index element={<Navigate replace to='cities'/>} />
           <Route path='cities' element={<CityList/>}/>
           <Route path='cities/:id' element={<City />} />

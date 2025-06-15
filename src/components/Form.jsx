@@ -68,13 +68,14 @@ export default function Form() {
       cityName,
       country,
       emoji,
-      date,
+      dateVisited: date,
       notes,
       position:{
         lat,
         lng
       }
     }
+    console.log(newCity)
     await createCity(newCity);
     navigate('/app/cities');
   }
